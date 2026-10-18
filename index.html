@@ -54,36 +54,12 @@
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M20.5 11.5a8.5 8.5 0 0 1-12.6 7.4L3 20l1.2-4.6A8.5 8.5 0 1 1 20.5 11.5Z"/><path d="M8.5 8.2c.4-.7.7-.7 1.1-.7.2 0 .4 0 .6.5l.7 1.6c.1.3.1.5-.1.7l-.5.6c-.2.2-.2.4 0 .7.5.9 1.3 1.6 2.2 2 .3.1.5.1.7-.1l.7-.8c.2-.2.4-.2.7-.1l1.5.7c.3.1.4.3.4.5 0 .4-.2 1-.7 1.3-.5.4-1.2.6-2 .4-1-.2-2.3-.8-3.6-2-1.1-1-1.9-2.3-2.1-3.2-.2-.8.1-1.6.4-2.1Z"/></svg>
           Scrivimi su WhatsApp
         </a>
-        <a class="link" href="https://www.instagram.com/andreakalii_/" target="_blank" rel="noopener noreferrer">
+        <a class="link" href="https://instagram.com/andreakalii_/" target="_blank" rel="noopener noreferrer">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".8" fill="currentColor"/></svg>
           Seguimi su Instagram
         </a>
-        <button class="link" type="button" onclick="saveContact()" style="width:100%;font-family:inherit;cursor:pointer">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><rect x="4" y="3" width="16" height="18" rx="2"/><circle cx="12" cy="9" r="2.5"/><path d="M8 17c.7-2 2-3 4-3s3.3 1 4 3"/></svg>
-          Salva il mio contatto
-        </button>
       </nav>
-      <div class="foot">Un piacere conoscerti, anche in digitale.</div>
     </div>
   </main>
-  <script>
-    function saveContact() {
-      const vcard = [
-        'BEGIN:VCARD',
-        'VERSION:3.0',
-        'N:Caliumi;Andrea;;;',
-        'FN:Andrea Caliumi',
-        'TEL;TYPE=CELL:+393792169581',
-        'URL:https://www.instagram.com/andreakalii_/',
-        'END:VCARD'
-      ].join('\\r\\n');
-      const blob = new Blob([vcard], { type: 'text/vcard;charset=utf-8' });
-      const url = URL.createObjectURL(blob);
-      const a = document.createElement('a');
-      a.href = url; a.download = 'Andrea-Caliumi.vcf';
-      document.body.appendChild(a); a.click(); a.remove();
-      URL.revokeObjectURL(url);
-    }
-  </script>
 </body>
 </html>
